@@ -1,4 +1,4 @@
-#Funktionen:
+# Vorläufige Funktionen:
 
 * triviale Befehle wie z.B. !about (antwortet mit dem Thema des Streams)
     * evtl. generieren lassen aus Grammatik
