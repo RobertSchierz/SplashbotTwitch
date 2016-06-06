@@ -1,7 +1,7 @@
 #Funktionen:
 
-- triviale Befehle wie z.B. !about (antwortet mit dem Thema des Streams)
-- evtl. generieren lassen aus Grammatik
+* triviale Befehle wie z.B. !about (antwortet mit dem Thema des Streams)
+    * evtl. generieren lassen aus Grammatik
 - !setcommand <command> <message>
 - Bsp.: !setcommand !multitwitch Blabla hier könnt ihr uns beiden zuschauen: URL!
 - Befehle zum Streaminfo ändern
