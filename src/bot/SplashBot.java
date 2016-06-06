@@ -7,7 +7,7 @@ import org.jibble.pircbot.PircBot;
  */
 public class SplashBot extends PircBot{
 
-    SplashBot(){
+    public SplashBot(){
         this.setName("SplashBot");
     }
 }
