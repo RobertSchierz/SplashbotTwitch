@@ -8,6 +8,14 @@ import org.jibble.pircbot.PircBot;
 public class SplashBot extends PircBot{
 
     public SplashBot(){
-        this.setName("SplashBot");
+        this.setName("splshbot");
+        this.isConnected();
     }
+
+    @Override
+    protected void onMessage(String channel, String sender, String login, String hostname, String message) {
+        System.out.println(sender + ": " + message);
+    }
+
+
 }
