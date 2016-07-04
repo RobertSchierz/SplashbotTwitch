@@ -42,15 +42,17 @@ public class SplashBot extends PircBot {
         }*/
         if(controllgrammar.getCommandList().containsKey(message)){
             send(controllgrammar.getCommandList().get(message).toString());
-           /* try {
-                callMethods(controllgrammar.getCommandList().get(message).toString());
+
+        }else if(controllgrammar.getMethodist().containsKey(message)){
+            try {
+                callMethods(controllgrammar.getMethodist().get(message).toString());
             } catch (NoSuchMethodException e) {
                 e.printStackTrace();
             } catch (InvocationTargetException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
-            }*/
+            }
         }
     }
 

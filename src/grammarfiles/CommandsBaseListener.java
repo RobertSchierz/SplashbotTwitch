@@ -35,6 +35,30 @@ public class CommandsBaseListener implements CommandsListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCommand(CommandsParser.CommandContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCommandvaluerule(CommandsParser.CommandvalueruleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCommandvaluerule(CommandsParser.CommandvalueruleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMethodrule(CommandsParser.MethodruleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMethodrule(CommandsParser.MethodruleContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

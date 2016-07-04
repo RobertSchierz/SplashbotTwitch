@@ -1,2 +1,3 @@
-!test=tester;
-!uptime=getUptime;;
+!test=Was denkst du eigentlich wer du bist;
+!uptime=getUptime();
+!jan=Ist Behindert;

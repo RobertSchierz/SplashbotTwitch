@@ -14,6 +14,7 @@ import java.util.Map;
 public class CommandControll {
     public static boolean error = false;
     public static Map<String,String> commandlist = new HashMap<String,String>();
+    public static Map<String,String> methodlist = new HashMap<String,String>();
 
     public void checkCommand() throws IOException {
 
@@ -36,5 +37,9 @@ public class CommandControll {
 
     public Map getCommandList(){
         return commandlist;
+    }
+
+    public Map getMethodist(){
+        return methodlist;
     }
 }

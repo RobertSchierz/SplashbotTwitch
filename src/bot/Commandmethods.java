@@ -5,7 +5,7 @@ package bot;
  */
 public class Commandmethods extends SplashBot {
 
-    public void tester(){
-        System.out.println("Test");
+    public void getUptime(){
+        System.out.println("Uptime Amk");
     }
 }

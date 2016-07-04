@@ -27,4 +27,24 @@ public interface CommandsListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitCommand(CommandsParser.CommandContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CommandsParser#commandvaluerule}.
+	 * @param ctx the parse tree
+	 */
+	void enterCommandvaluerule(CommandsParser.CommandvalueruleContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CommandsParser#commandvaluerule}.
+	 * @param ctx the parse tree
+	 */
+	void exitCommandvaluerule(CommandsParser.CommandvalueruleContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CommandsParser#methodrule}.
+	 * @param ctx the parse tree
+	 */
+	void enterMethodrule(CommandsParser.MethodruleContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CommandsParser#methodrule}.
+	 * @param ctx the parse tree
+	 */
+	void exitMethodrule(CommandsParser.MethodruleContext ctx);
 }

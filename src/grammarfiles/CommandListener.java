@@ -26,7 +26,12 @@ public class CommandListener extends CommandsBaseListener {
 
         for(int i = 0; i < ctx.getChildCount()-1; i++){
             CommandsParser.CommandContext tempcommand = ctx.command().get(i);
-            CommandControll.commandlist.put(tempcommand.commandnamesign.getText() + tempcommand.commandname.getText(), tempcommand.commandvalue.getText());
+            if(tempcommand.methodrule().getChildCount() == 0){
+                CommandControll.commandlist.put(tempcommand.commandnamesign.getText() + tempcommand.commandname.getText(), tempcommand.commandvalue.getText());
+            }else if(tempcommand.methodrule().getChildCount() != 0){
+                CommandControll.methodlist.put(tempcommand.commandnamesign.getText() + tempcommand.commandname.getText(), tempcommand.commandvalue.getText());
+            }
+
         }
     }
 

@@ -22,4 +22,16 @@ public interface CommandsVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitCommand(CommandsParser.CommandContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CommandsParser#commandvaluerule}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCommandvaluerule(CommandsParser.CommandvalueruleContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CommandsParser#methodrule}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMethodrule(CommandsParser.MethodruleContext ctx);
 }
