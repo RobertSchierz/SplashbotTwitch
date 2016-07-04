@@ -1,16 +1,20 @@
 package bot;
 
+import grammarfiles.CommandControll;
 import org.jibble.pircbot.IrcException;
 import org.jibble.pircbot.PircBot;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * Created by Jan on 07.06.2016.
  */
 public class SplashBot extends PircBot {
+
+
+    CommandControll controllgrammar = new CommandControll();
 
     public String channel = "#splshbot";
     //public String channel = "#splshbot";
@@ -30,11 +34,23 @@ public class SplashBot extends PircBot {
     }
 
     public void checkMessage(String message){
-        if (message.equalsIgnoreCase("!test")){
+       /* if (message.equalsIgnoreCase("!test")){
             send(":D");
         }
         if (message.equalsIgnoreCase("!uptime")){
             getUptime();
+        }*/
+        if(controllgrammar.getCommandList().containsKey(message)){
+            send(controllgrammar.getCommandList().get(message).toString());
+           /* try {
+                callMethods(controllgrammar.getCommandList().get(message).toString());
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }*/
         }
     }
 
@@ -86,5 +102,20 @@ public class SplashBot extends PircBot {
         //System.out.println("Startzeit: " + sdf.format(new Date(startTimeMillis)));
         //System.out.println(sdf.format(new Date(uptimeMillis)));
         //send(sdf.format(resultdate));
+    }
+
+    public boolean checkGrammar() throws IOException {
+        controllgrammar.checkCommand();
+        return controllgrammar.checkError();
+    }
+
+    public void callMethods(String command) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+
+            Commandmethods methods = new Commandmethods();
+            Class methodClass = methods.getClass();
+
+            Method method1 = methodClass.getMethod(command, new Class[]{});
+            method1.invoke(methods, new Object[]{});
+
     }
 }

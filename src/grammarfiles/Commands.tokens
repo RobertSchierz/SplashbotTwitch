@@ -1,0 +1,9 @@
+First=1
+Letter=2
+Commandseperator=3
+Separator=4
+LineBreak=5
+WHITESPACE=6
+'!'=1
+'='=3
+';'=4
