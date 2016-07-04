@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
 public class SplashBot extends PircBot {
 
 
-    CommandControll controllgrammar = new CommandControll();
+    CommandControll comandControll = new CommandControll();
 
     public String channel = "#splshbot";
     //public String channel = "#splshbot";
@@ -40,12 +40,12 @@ public class SplashBot extends PircBot {
         if (message.equalsIgnoreCase("!uptime")){
             getUptime();
         }*/
-        if(controllgrammar.getCommandList().containsKey(message)){
-            send(controllgrammar.getCommandList().get(message).toString());
+        if(comandControll.getCommandList().containsKey(message)){
+            send(comandControll.getCommandList().get(message).toString());
 
-        }else if(controllgrammar.getMethodist().containsKey(message)){
+        }else if(comandControll.getMethodist().containsKey(message)){
             try {
-                callMethods(controllgrammar.getMethodist().get(message).toString());
+                callMethods(comandControll.getMethodist().get(message).toString());
             } catch (NoSuchMethodException e) {
                 e.printStackTrace();
             } catch (InvocationTargetException e) {
@@ -111,8 +111,8 @@ public class SplashBot extends PircBot {
 
 
     public boolean checkGrammar() throws IOException {
-        controllgrammar.checkCommand();
-        return controllgrammar.checkError();
+        comandControll.checkCommand();
+        return comandControll.checkError();
     }
 
    public void callMethods(String command) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {

@@ -39,4 +39,13 @@ public class Commandmethods extends SplashBot {
         //send(sdf.format(resultdate));
 
     }
+
+    public void getChannelname(){
+        bot.send(bot.channel);
+    }
+
+    public void getBotName(){
+        bot.send(bot.getName());
+    }
+
 }

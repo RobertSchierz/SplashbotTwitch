@@ -1,3 +1,4 @@
 !test=Was denkst du eigentlich wer du bist;
 !uptime=getUptime();
-!jan=Ist Behindert;
+!getchannelname=getChannelname();
+!getbotname=getBotName();
